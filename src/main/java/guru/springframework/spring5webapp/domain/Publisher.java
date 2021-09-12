@@ -19,15 +19,12 @@ public class Publisher {
 
     @OneToMany
     @JoinColumn(name = "publisher_id")
-    private Set<Book> books;
+    private Set<Book> books = new HashSet<>();
 
 
-    public Publisher() {
-        this.books = new HashSet<>();
-    }
+    public Publisher() {}
 
     public Publisher(String name, String addressLine1, String city, String state, String zip) {
-        this();
         this.name = name;
         this.addressLine1 = addressLine1;
         this.city = city;
