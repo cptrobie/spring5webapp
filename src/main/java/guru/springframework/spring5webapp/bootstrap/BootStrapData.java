@@ -28,6 +28,8 @@ public class BootStrapData implements CommandLineRunner {
         Book ddd = new Book("Domain Driven Design", "123123");
         Publisher wrox = new Publisher("Wrox Press", "1102 Warwick Road", "Acock's Green", "Burmingham", "B27 6BH");
 
+        publisherRepository.save(wrox);
+
         eric.getBooks().add(ddd);
         ddd.getAuthors().add(eric);
         ddd.setPublisher(wrox);
